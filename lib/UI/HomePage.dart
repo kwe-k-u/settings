@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/AccountsPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -16,6 +17,7 @@ class _HomePageState extends State<HomePage> {
           title: Text("SETTINGS"),
           centerTitle: true,
         ),
+
         body: Container(
           padding: EdgeInsets.all(12.0),
           child: ListView(
@@ -41,6 +43,12 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.account_circle_rounded),
                 title: Text("Accounts"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> AccountsPage()
+                  )
+                  );
+                },
               ),
 
               ListTile(
