@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:settings/UI/AboutPage.dart';
 import 'package:settings/UI/AccountsPage.dart';
+import 'package:settings/UI/WirelessAndNetworksPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -29,6 +30,11 @@ class _HomePageState extends State<HomePage> {
                 leading: Icon(Icons.wifi),
                 title: Text("Wireless and Networks"),
                 subtitle: Text("Wifi, Bluetooth. Mobile networks, Flight Mode"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context)=> WirelessAndNetworksPage()
+                  ));
+                },
               ),
 
               ListTile(
