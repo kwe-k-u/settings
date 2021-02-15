@@ -1,51 +1,50 @@
 import 'package:flutter/material.dart';
 
-class DeviceInformationPage extends StatelessWidget {
+class HardwareInformationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Container(
+          padding: EdgeInsets.all(12.0),
           child: ListView(
             children: [
 
               ListTile(
-                title: Text("Device Name"),
-              ),
-
-
-              ListTile(
-                title: Text("Device Model"),
-              ),
-
-
-              ListTile(
-                title: Text("Manufacturer"),
+                title: Text("CPU"),
               ),
 
               ListTile(
-                title: Text("Serial Number"),
+                title: Text("RAM"),
               ),
 
               ListTile(
-                title: Text("Build Number"),
+                title: Text("Internal Memory"),
               ),
 
               ListTile(
-                title: Text("IMEI"),
+                title: Text("External Memory"),
               ),
 
               ListTile(
-                title: Text("Wi-Fi MAC address"),
+                title: Text("Battery Status"),
               ),
 
               ListTile(
-                title: Text("Bluetooth address"),
+                title: Text("Battery Level"),
               ),
 
               ListTile(
-                title: Text("IP Address"),
+                title: Text("Battery Capacity"),
               ),
+
+              ListTile(
+                title: Text("Resolution"),
+              ),
+
+
+
+
             ],
           ),
         ),
