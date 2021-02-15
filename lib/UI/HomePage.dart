@@ -4,6 +4,7 @@ import 'package:settings/UI/AccountsPage.dart';
 import 'package:settings/UI/WirelessAndNetworksPage.dart';
 import 'package:settings/UI/DisplayPage.dart';
 import 'package:settings/UI/StoragePage.dart';
+import 'package:settings/UI/NotificationsPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -76,6 +77,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.circle_notifications),
                 title: Text("Notifications"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> NotificationsPage())
+                  );
+                },
               ),
 
 
