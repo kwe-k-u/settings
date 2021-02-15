@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/NotificationsPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -46,6 +47,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.circle_notifications),
                 title: Text("Notifications"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> NotificationsPage())
+                  );
+                },
               ),
 
 
