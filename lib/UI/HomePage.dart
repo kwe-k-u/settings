@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/StoragePage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -36,6 +37,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.sd_storage_sharp),
                 title: Text("Storage"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> StoragePage())
+                  );
+                },
               ),
 
               ListTile(
