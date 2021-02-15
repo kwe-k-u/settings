@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/PrivacyPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -63,6 +64,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.app_settings_alt_rounded),
                 title: Text("Privacy"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> PrivacyPage())
+                  );
+                },
               ),
 
               ListTile(
