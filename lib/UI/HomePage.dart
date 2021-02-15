@@ -3,6 +3,7 @@ import 'package:settings/UI/AboutPage.dart';
 import 'package:settings/UI/AccountsPage.dart';
 import 'package:settings/UI/WirelessAndNetworksPage.dart';
 import 'package:settings/UI/DisplayPage.dart';
+import 'package:settings/UI/StoragePage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -54,6 +55,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.sd_storage_sharp),
                 title: Text("Storage"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> StoragePage())
+                  );
+                },
               ),
 
               ListTile(
