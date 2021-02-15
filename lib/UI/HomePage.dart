@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:settings/UI/AboutPage.dart';
 import 'package:settings/UI/AccountsPage.dart';
 import 'package:settings/UI/WirelessAndNetworksPage.dart';
+import 'package:settings/UI/DisplayPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -16,8 +17,13 @@ class _HomePageState extends State<HomePage> {
 
       home: Scaffold(
         appBar: AppBar(
-          title: Text("SETTINGS"),
+          title: Text("Settings"),
           centerTitle: true,
+          leading: BackButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+          ),
         ),
 
         body: Container(
@@ -40,6 +46,9 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.wb_sunny_rounded),
                 title: Text("Display"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> DisplayPage()));
+                },
               ),
 
               ListTile(
