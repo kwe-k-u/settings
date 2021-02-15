@@ -6,6 +6,7 @@ import 'package:settings/UI/DisplayPage.dart';
 import 'package:settings/UI/StoragePage.dart';
 import 'package:settings/UI/NotificationsPage.dart';
 import 'package:settings/UI/PrivacyPage.dart';
+import 'package:settings/UI/SecurityPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -94,6 +95,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.security),
                 title: Text("Security"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> SecurityPage())
+                  );
+                },
               ),
 
 
