@@ -7,6 +7,7 @@ import 'package:settings/UI/StoragePage.dart';
 import 'package:settings/UI/NotificationsPage.dart';
 import 'package:settings/UI/PrivacyPage.dart';
 import 'package:settings/UI/SecurityPage.dart';
+import 'package:settings/UI/AppsPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -90,6 +91,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.android_rounded),
                 title: Text("Apps"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> AppsPage())
+                  );
+                },
               ),
 
               ListTile(
