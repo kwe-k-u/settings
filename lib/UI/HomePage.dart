@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/AppsPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -52,6 +53,11 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.android_rounded),
                 title: Text("Apps"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> AppsPage())
+                  );
+                },
               ),
 
               ListTile(
