@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings/UI/AboutPage.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -68,6 +69,12 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 leading: Icon(Icons.info_outline),
                 title: Text("About"),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=> AboutPage()
+                  )
+                  );
+                },
               ),
 
 
